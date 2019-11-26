@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    #激活开发环境
+    active: dev
+---
+#开发环境配置
+spring:
+  resources:
+    static-locations: classpath:/static/
+  #静态资源扫描
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://106.13.40.231:3306/book
+    username: root
+    password: j8787667n
+    driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    static-path-pattern: /static/**
+
+server:
+  servlet:
+    context-path: /
+  port: 8084
+
+---
+#生产环境配置
+spring:
+server:
+  port: 8082
