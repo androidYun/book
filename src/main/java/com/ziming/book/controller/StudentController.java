@@ -17,14 +17,14 @@ public class StudentController {
 
     @RequestMapping("/index")
     public ModelAndView index() {
-        ModelAndView modelAndView = new ModelAndView("login");
+        ModelAndView modelAndView = new ModelAndView("index");
         return modelAndView;
     }
 
     @RequestMapping("/login")
     public ModelAndView login(String sno, String password) {
         Student student = studentService.selectStudentById(sno);
-        ModelAndView modelAndView = new ModelAndView("");
+        ModelAndView modelAndView = new ModelAndView("login");
         return modelAndView;
     }
 

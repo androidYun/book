@@ -15,7 +15,7 @@
 
 <div class="login">
     <h3 class="title">图书管理系统</h3>
-    <form>
+    <form action="/student/index">
         <div>
             <input type="input">
             <input type="input">

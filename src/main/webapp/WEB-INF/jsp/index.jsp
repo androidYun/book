@@ -11,6 +11,14 @@
     <title>Title</title>
 </head>
 <body>
-都是第三方第三方对方身份的受到防晒霜代发
+<form action="/student/login">
+    <div>
+        <input type="input">
+        <input type="input">
+        <input type="radio" aria-label="学生">
+        <input type="radio" name="管理员">
+        <input type="submit">
+    </div>
+</form>
 </body>
 </html>
