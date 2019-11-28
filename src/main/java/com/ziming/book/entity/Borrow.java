@@ -1,5 +1,7 @@
 package com.ziming.book.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -22,61 +24,88 @@ public class Borrow {
     /**  数据库字段：js_number */
     private String jsNumber;
 
-    /**  数据库字段：book_number */
+    /**
+     * 数据库字段：book_number
+     */
     private String bookNumber;
 
-    /**  数据库字段：b_date */
+    /**
+     * 数据库字段：b_date
+     */
+    @JsonFormat(timezone = "GMT+8",pattern = "yyyyMMddHHmmss")
     private Date bDate;
 
-    /**  数据库字段：r_date */
+    /**
+     * 数据库字段：r_date
+     */
+    @JsonFormat(timezone = "GMT+8",pattern = "yyyyMMddHHmmss")
     private Date rDate;
 
-    /**  数据库字段：borrow.js_number */
+
+    /**
+     * 数据库字段：borrow.js_number
+     */
     public void setJsNumber(String jsNumber) {
         this.jsNumber = jsNumber;
     }
 
-    /**  数据库字段：borrow.js_number */
+    /**
+     * 数据库字段：borrow.js_number
+     */
     public String getJsNumber() {
         return this.jsNumber;
     }
 
-    /**  数据库字段：borrow.book_number */
+    /**
+     * 数据库字段：borrow.book_number
+     */
     public void setBookNumber(String bookNumber) {
         this.bookNumber = bookNumber;
     }
 
-    /**  数据库字段：borrow.book_number */
+    /**
+     * 数据库字段：borrow.book_number
+     */
     public String getBookNumber() {
         return this.bookNumber;
     }
 
-    /**  数据库字段：borrow.b_date */
+    /**
+     * 数据库字段：borrow.b_date
+     */
     public void setBDate(Date bDate) {
         this.bDate = bDate;
     }
 
-    /**  数据库字段：borrow.b_date */
+    /**
+     * 数据库字段：borrow.b_date
+     */
     public Date getBDate() {
         return this.bDate;
     }
 
-    /**  数据库字段：borrow.r_date */
+    /**
+     * 数据库字段：borrow.r_date
+     */
     public void setRDate(Date rDate) {
         this.rDate = rDate;
     }
 
-    /**  数据库字段：borrow.r_date */
+    /**
+     * 数据库字段：borrow.r_date
+     */
     public Date getRDate() {
         return this.rDate;
     }
+
+
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
         result = (prime * result) +
-            ((jsNumber == null) ? 0 : jsNumber.hashCode());
+                ((jsNumber == null) ? 0 : jsNumber.hashCode());
 
         return result;
     }

@@ -20,7 +20,7 @@ public class Book {
     @Column(name = "book_number")
     @GeneratedValue(strategy = GenerationType.AUTO)
     /**  数据库字段：book_number */
-    private Integer bookNumber;
+    private String bookNumber;
 
     /**  数据库字段：book_name */
     private String bookName;
@@ -35,12 +35,12 @@ public class Book {
     private Integer skNumber;
 
     /**  数据库字段：book.book_number */
-    public void setBookNumber(Integer bookNumber) {
+    public void setBookNumber(String bookNumber) {
         this.bookNumber = bookNumber;
     }
 
     /**  数据库字段：book.book_number */
-    public Integer getBookNumber() {
+    public String getBookNumber() {
         return this.bookNumber;
     }
 
